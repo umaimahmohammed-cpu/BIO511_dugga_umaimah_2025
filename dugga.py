@@ -3,19 +3,19 @@
 numbers = [15, -5, -12, 7, 10, -7, 3, -10, 4]
 
 
-# a.
+# a. 
 sum_values =0 
 abs_values=[]
 for num in numbers:
     if abs(num) >= 10:
         abs_values.append(num)
         sum_values += num
-
+print(abs_values)
 print(sum_values)
 
 # 2. b
 
-cubes_nums = []
+cubes_nums = [] # empty list to save the list of cubes 
 for items in numbers: #go over the loop
     if items >= 0:  # if itsms are more than 0
         continue  # skip posative numbers 
@@ -30,10 +30,10 @@ repeated = False
 for num in abs_values:
     if num in scanned:
         print (f'the duplicate is {num}')
-        repeated = True
+        repeated = True  #if true stop
         break
     else:
-                scanned.append(num)  # i should remember this 
+                scanned.append(num)  # add to scanned
 if not repeated:
      print("No repeats")
 
@@ -67,6 +67,7 @@ def histoplot(dataframe):
     plt.xlabel('expression')
     plt.ylabel('number of genes')
     plt.show() 
-    plt.savefig('fpkm_distribution.png', dpi=300) # 
+    plt.savefig('fpkm_distribution.png', dpi=300) 
 #2.2.2
+#print the function 
 histoplot(df)
